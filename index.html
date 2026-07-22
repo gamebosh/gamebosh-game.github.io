@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#120823">
+  <meta name="description" content="Play GameBosh Neon Dash, a free browser game built with HTML5 Canvas, CSS and JavaScript. Dodge obstacles, collect energy orbs and beat your high score.">
+  <meta name="keywords" content="GameBosh, free browser game, HTML5 game, JavaScript game, online game, no download game">
+  <meta name="author" content="Souhail Achahod">
+  <meta property="og:title" content="GameBosh Neon Dash – Free Browser Game">
+  <meta property="og:description" content="An original fast-paced HTML5 endless runner inspired by the GameBosh gaming experience.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gamebosh.github.io/">
+  <meta property="og:image" content="https://gamebosh.github.io/assets/social-preview.png">
+  <link rel="canonical" href="https://gamebosh.github.io/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <title>GameBosh Neon Dash – Free Browser Game</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "GameBosh Neon Dash",
+    "description": "A free HTML5 endless runner browser game where players dodge obstacles and collect energy orbs.",
+    "genre": ["Arcade", "Endless Runner", "Casual"],
+    "playMode": "SinglePlayer",
+    "applicationCategory": "Game",
+    "operatingSystem": "Any modern web browser",
+    "author": {
+      "@type": "Person",
+      "name": "Souhail Achahod"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "GameBosh",
+      "url": "https://gamebosh.com/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header" aria-label="GameBosh project header">
+      <a class="brand" href="https://gamebosh.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit GameBosh.com">
+        <span class="brand-mark" aria-hidden="true">GB</span>
+        <span>
+          <strong>GameBosh</strong>
+          <small>Neon Dash</small>
+        </span>
+      </a>
+      <nav class="header-actions" aria-label="Project links">
+        <button id="soundButton" class="icon-button" type="button" aria-label="Mute sound" title="Mute sound">🔊</button>
+        <a class="secondary-button" href="https://gamebosh.com/" target="_blank" rel="noopener noreferrer">More free games</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-copy" aria-labelledby="game-title">
+        <p class="eyebrow">Original HTML5 browser game</p>
+        <h1 id="game-title">Run fast. Dodge everything. Own the neon.</h1>
+        <p>Move between three lanes, collect energy orbs, use shields and survive as the speed increases.</p>
+      </section>
+
+      <section class="game-card" aria-label="GameBosh Neon Dash game">
+        <div class="scorebar" aria-live="polite">
+          <div><span>Score</span><strong id="scoreValue">0</strong></div>
+          <div><span>Best</span><strong id="bestValue">0</strong></div>
+          <div><span>Orbs</span><strong id="orbValue">0</strong></div>
+          <div><span>Level</span><strong id="levelValue">1</strong></div>
+        </div>
+
+        <div class="canvas-wrap" id="canvasWrap">
+          <canvas id="gameCanvas" width="960" height="540" aria-label="GameBosh Neon Dash canvas game"></canvas>
+
+          <div id="startOverlay" class="overlay is-visible">
+            <div class="overlay-panel">
+              <span class="status-pill">⚡ Instant browser game</span>
+              <h2>GameBosh Neon Dash</h2>
+              <p>Dodge red barriers, collect gold energy orbs and grab green shields.</p>
+              <div class="controls-list" aria-label="Game controls">
+                <span><kbd>←</kbd><kbd>→</kbd> Move</span>
+                <span><kbd>A</kbd><kbd>D</kbd> Move</span>
+                <span><kbd>P</kbd> Pause</span>
+              </div>
+              <button id="startButton" class="primary-button" type="button">Start game</button>
+              <p class="mobile-hint">On mobile, tap the left or right side of the game.</p>
+            </div>
+          </div>
+
+          <div id="pauseOverlay" class="overlay">
+            <div class="overlay-panel compact">
+              <span class="status-pill">Paused</span>
+              <h2>Take a breath</h2>
+              <button id="resumeButton" class="primary-button" type="button">Resume</button>
+            </div>
+          </div>
+
+          <div id="gameOverOverlay" class="overlay">
+            <div class="overlay-panel">
+              <span class="status-pill danger">Run complete</span>
+              <h2>Your score: <span id="finalScore">0</span></h2>
+              <p id="resultMessage">A strong run. Try again and beat your best score.</p>
+              <div class="result-actions">
+                <button id="restartButton" class="primary-button" type="button">Play again</button>
+                <a class="secondary-button" href="https://gamebosh.com/" target="_blank" rel="noopener noreferrer">Explore GameBosh</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="touch-controls" aria-label="Mobile game controls">
+            <button id="moveLeftButton" type="button" aria-label="Move left">←</button>
+            <button id="moveRightButton" type="button" aria-label="Move right">→</button>
+          </div>
+        </div>
+
+        <div class="game-footer">
+          <div>
+            <strong>Tip:</strong> A shield protects you from one collision.
+          </div>
+          <button id="pauseButton" class="text-button" type="button">Pause game</button>
+        </div>
+      </section>
+
+      <section class="project-info" aria-labelledby="about-project">
+        <div>
+          <p class="eyebrow">Open-source showcase</p>
+          <h2 id="about-project">Built for the GameBosh portfolio</h2>
+          <p>This project demonstrates responsive game UI, HTML5 Canvas animation, touch controls, local high-score storage and progressive difficulty without external libraries.</p>
+        </div>
+        <a class="primary-button small" href="https://gamebosh.com/" target="_blank" rel="noopener noreferrer">Play more games on GameBosh.com</a>
+      </section>
+    </main>
+
+    <footer>
+      <p>Created by Souhail Achahod for <a href="https://gamebosh.com/" target="_blank" rel="noopener noreferrer">GameBosh.com</a>.</p>
+      <p>Free browser games. No downloads. Just play.</p>
+    </footer>
+  </div>
+
+  <noscript>This browser game requires JavaScript to run.</noscript>
+  <script src="game.js" defer></script>
+</body>
+</html>

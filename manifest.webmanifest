@@ -1,0 +1,17 @@
+{
+  "name": "GameBosh Neon Dash",
+  "short_name": "Neon Dash",
+  "description": "A free HTML5 endless runner browser game by GameBosh.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#090411",
+  "theme_color": "#120823",
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
