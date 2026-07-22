@@ -15,7 +15,7 @@ This open-source project was created as a portfolio showcase for **[GameBosh.com
 
 After publishing the repository with GitHub Pages, add your live game link here:
 
-**Live demo:** [https://gamebosh.github.io/](https://gamebosh.github.io/)
+**Live demo:** [https://gamebosh.github.io/gamebosh-game.github.io/](https://gamebosh.github.io/gamebosh-game.github.io/)
 
 For more free browser games, visit **[GameBosh.com](https://gamebosh.com/)**.
 
@@ -63,19 +63,19 @@ Then open `http://localhost:8080` in your browser.
 
 ## Publish with GitHub Pages
 
-1. Create a public repository named exactly `gamebosh.github.io`.
+1. Create a public repository named `gamebosh-game.github.io` under the `gamebosh` account.
 2. Upload every file from this package to the repository root.
 3. Open **Settings → Pages**.
 4. Under **Build and deployment**, select **Deploy from a branch**.
 5. Choose the `main` branch and the `/(root)` folder, then click **Save**.
-6. Open `https://gamebosh.github.io/` after the Pages deployment completes.
+6. Open `https://gamebosh.github.io/gamebosh-game.github.io/` after the Pages deployment completes.
 
 ## Suggested repository details
 
 **Repository name**
 
 ```text
-gamebosh.github.io
+gamebosh-game.github.io
 ```
 
 **Description**
